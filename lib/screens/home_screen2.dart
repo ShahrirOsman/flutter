@@ -3,10 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:yayasan_prihatin/app_drawer.dart';
 import 'package:yayasan_prihatin/screens/berita_prihatin_screen.dart';
+import 'package:yayasan_prihatin/screens/donation_screen.dart';
 import 'package:yayasan_prihatin/screens/elemen_prihatin.dart';
 import 'package:yayasan_prihatin/screens/fungsi.dart';
 import 'package:yayasan_prihatin/screens/maklumat_korporat.dart';
 import 'package:yayasan_prihatin/screens/mutiara_kata.dart';
+import 'package:yayasan_prihatin/screens/program_screen.dart';
 import 'package:yayasan_prihatin/screens/registration_screen.dart';
 import 'package:yayasan_prihatin/screens/terkini_prihatin_screen.dart';
 import 'package:yayasan_prihatin/screens/visi_misi.dart';
@@ -175,11 +177,13 @@ class _HomeScreen2State extends State<HomeScreen2> {
                       ),
                     ),
                     child: ExpansionTile(
-                      
                       title: Center(
                         child: Text(
                           'MENGENAI KAMI',
-                          style: TextStyle(color: Colors.white, fontSize: 16),
+                          style: TextStyle(
+                              fontSize: 16.0,
+                              color: Colors.white,
+                              fontWeight: FontWeight.w600),
                         ),
                       ),
                       children: <Widget>[
@@ -192,16 +196,6 @@ class _HomeScreen2State extends State<HomeScreen2> {
                             ),
                           ),
                           onTap: () {
-                            // Navigator.push(
-                            //   context,
-                            //   MaterialPageRoute(
-                            //     builder: (context) => AboutUsScreen(
-                            //       url:
-                            //           'https://demo01.yayasanprihatin.com/mutiara-kata-pengerusi/',
-                            //       title: 'Mutiara Kata',
-                            //     ),
-                            //   ),
-                            // );
                             Navigator.push(
                               context,
                               MaterialPageRoute(
@@ -217,16 +211,6 @@ class _HomeScreen2State extends State<HomeScreen2> {
                             style: TextStyle(color: Colors.white, fontSize: 16),
                           ),
                           onTap: () {
-                            // Navigator.push(
-                            //   context,
-                            //   MaterialPageRoute(
-                            //     builder: (context) => AboutUsScreen(
-                            //       url:
-                            //           'https://demo01.yayasanprihatin.com/maklumat-korporat/',
-                            //       title: 'Maklumat Korporat',
-                            //     ),
-                            //   ),
-                            // );
                             Navigator.push(
                               context,
                               MaterialPageRoute(
@@ -242,16 +226,6 @@ class _HomeScreen2State extends State<HomeScreen2> {
                             style: TextStyle(color: Colors.white, fontSize: 16),
                           ),
                           onTap: () {
-                            // Navigator.push(
-                            //   context,
-                            //   MaterialPageRoute(
-                            //     builder: (context) => AboutUsScreen(
-                            //       url:
-                            //           'https://demo01.yayasanprihatin.com/visi-misi/',
-                            //       title: 'Visi dan Misi',
-                            //     ),
-                            //   ),
-                            // );
                             Navigator.push(
                               context,
                               MaterialPageRoute(
@@ -267,16 +241,6 @@ class _HomeScreen2State extends State<HomeScreen2> {
                             style: TextStyle(color: Colors.white, fontSize: 16),
                           ),
                           onTap: () {
-                            // Navigator.push(
-                            //   context,
-                            //   MaterialPageRoute(
-                            //     builder: (context) => AboutUsScreen(
-                            //       url:
-                            //           'https://demo01.yayasanprihatin.com/fungsi/',
-                            //       title: 'Fungsi',
-                            //     ),
-                            //   ),
-                            // );
                             Navigator.push(
                               context,
                               MaterialPageRoute(
@@ -295,16 +259,6 @@ class _HomeScreen2State extends State<HomeScreen2> {
                             ),
                           ),
                           onTap: () {
-                            // Navigator.push(
-                            //   context,
-                            //   MaterialPageRoute(
-                            //     builder: (context) => AboutUsScreen(
-                            //       url:
-                            //           'https://demo01.yayasanprihatin.com/elemen-prihatin/',
-                            //       title: 'Elemen Prihatin',
-                            //     ),
-                            //   ),
-                            // );
                             Navigator.push(
                               context,
                               MaterialPageRoute(
@@ -319,7 +273,42 @@ class _HomeScreen2State extends State<HomeScreen2> {
                   SizedBox(
                     height: 20,
                   ),
+                  // Container(
+                  //   decoration: BoxDecoration(
+                  //     borderRadius: BorderRadius.circular(20.0),
+                  //     gradient: LinearGradient(
+                  //       colors: <Color>[
+                  //         Colors.indigo[800],
+                  //         Color(0XFFe52d27),
+                  //         // Color(0XFFb31217),
+                  //       ],
+                  //       begin: Alignment.topCenter,
+                  //       end: Alignment.bottomCenter,
+                  //     ),
+                  //   ),
+                  //   child: TextButton(
+                  //     onPressed: () {
+                  //       Navigator.push(
+                  //         context,
+                  //         MaterialPageRoute(
+                  //           builder: (context) => BeritaPrihatinScreen(),
+                  //         ),
+                  //       );
+                  //     },
+                  //     style: TextButton.styleFrom(
+                  //       shape: RoundedRectangleBorder(
+                  //         borderRadius: BorderRadius.circular(20),
+                  //       ),
+                  //       minimumSize: Size(250, 60),
+                  //     ),
+                  //     child: Text(
+                  //       'BERITA@PRIHATIN',
+                  //       style: TextStyle(fontSize: 16.0, color: Colors.white),
+                  //     ),
+                  //   ),
+                  // ),
                   Container(
+                    width: 250,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20.0),
                       gradient: LinearGradient(
@@ -332,67 +321,180 @@ class _HomeScreen2State extends State<HomeScreen2> {
                         end: Alignment.bottomCenter,
                       ),
                     ),
-                    child: TextButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => BeritaPrihatinScreen(),
-                          ),
-                        );
-                      },
-                      style: TextButton.styleFrom(
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20),
+                    child: ExpansionTile(
+                      title: Center(
+                        child: Text(
+                          'PROGRAM 2021',
+                          style: TextStyle(
+                              fontSize: 16.0,
+                              color: Colors.white,
+                              fontWeight: FontWeight.w600),
                         ),
-                        minimumSize: Size(250, 60),
                       ),
-                      child: Text(
-                        'BERITA@PRIHATIN',
-                        style: TextStyle(fontSize: 16.0, color: Colors.white),
-                      ),
+                      children: <Widget>[
+                        ListTile(
+                          leading: SizedBox(),
+                          title: Text(
+                            'Jelajah Pendidikan Prihatin',
+                            style: TextStyle(color: Colors.white, fontSize: 16),
+                          ),
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => ProgramScreen(index: 0),
+                              ),
+                            );
+                          },
+                        ),
+                        ListTile(
+                          leading: SizedBox(),
+                          title: Text(
+                            'Jelajah Prihatin Covid-19',
+                            style: TextStyle(color: Colors.white, fontSize: 16),
+                          ),
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => ProgramScreen(index: 1),
+                              ),
+                            );
+                          },
+                        ),
+                        ListTile(
+                          leading: SizedBox(),
+                          title: Text(
+                            'Konvensyen Pendidikan Bumiputra',
+                            style: TextStyle(color: Colors.white, fontSize: 16),
+                          ),
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => ProgramScreen(index: 2),
+                              ),
+                            );
+                          },
+                        ),
+                        ListTile(
+                          leading: SizedBox(),
+                          title: Text(
+                            'Akademi Kepimpinan Prihatin',
+                            style: TextStyle(color: Colors.white, fontSize: 16),
+                          ),
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => ProgramScreen(index: 3),
+                              ),
+                            );
+                          },
+                        ),
+                        ListTile(
+                          leading: SizedBox(),
+                          title: Text(
+                            'Tuisyen Prihatin Perdana',
+                            style: TextStyle(color: Colors.white, fontSize: 16),
+                          ),
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => ProgramScreen(index: 4),
+                              ),
+                            );
+                          },
+                        ),
+                        ListTile(
+                          leading: SizedBox(),
+                          title: Text(
+                            'Program Prihatin Rakyat',
+                            style: TextStyle(color: Colors.white, fontSize: 16),
+                          ),
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => ProgramScreen(index: 5),
+                              ),
+                            );
+                          },
+                        ),
+                        ListTile(
+                          leading: SizedBox(),
+                          title: Text(
+                            'Tabung Pendidikan Anak Bangsa',
+                            style: TextStyle(color: Colors.white, fontSize: 16),
+                          ),
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => ProgramScreen(index: 6),
+                              ),
+                            );
+                          },
+                        ),
+                        ListTile(
+                          leading: SizedBox(),
+                          title: Text(
+                            'Mengubah Destini Orang Asli (MDOA)',
+                            style: TextStyle(color: Colors.white, fontSize: 16),
+                          ),
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => ProgramScreen(index: 7),
+                              ),
+                            );
+                          },
+                        ),
+                      ],
                     ),
                   ),
                   SizedBox(
                     height: 20,
                   ),
-                  Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20.0),
-                      gradient: LinearGradient(
-                        colors: <Color>[
-                          Colors.indigo[800],
-                          Color(0XFFe52d27),
-                          // Color(0XFFb31217),
-                        ],
-                        begin: Alignment.topCenter,
-                        end: Alignment.bottomCenter,
-                      ),
-                    ),
-                    child: TextButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => TerkiniPrihatinScreen(),
-                          ),
-                        );
-                      },
-                      style: TextButton.styleFrom(
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20),
-                        ),
-                        minimumSize: Size(250, 60),
-                      ),
-                      child: Text(
-                        'TERKINI@PRIHATIN',
-                        style: TextStyle(fontSize: 16.0, color: Colors.white),
-                      ),
-                    ),
-                  ),
-                  SizedBox(
-                    height: 20,
-                  ),
+                  // Container(
+                  //   decoration: BoxDecoration(
+                  //     borderRadius: BorderRadius.circular(20.0),
+                  //     gradient: LinearGradient(
+                  //       colors: <Color>[
+                  //         Colors.indigo[800],
+                  //         Color(0XFFe52d27),
+                  //         // Color(0XFFb31217),
+                  //       ],
+                  //       begin: Alignment.topCenter,
+                  //       end: Alignment.bottomCenter,
+                  //     ),
+                  //   ),
+                  //   child: TextButton(
+                  //     onPressed: () {
+                  //       Navigator.push(
+                  //         context,
+                  //         MaterialPageRoute(
+                  //           builder: (context) => TerkiniPrihatinScreen(),
+                  //         ),
+                  //       );
+                  //     },
+                  //     style: TextButton.styleFrom(
+                  //       shape: RoundedRectangleBorder(
+                  //         borderRadius: BorderRadius.circular(20),
+                  //       ),
+                  //       minimumSize: Size(250, 60),
+                  //     ),
+                  //     child: Text(
+                  //       'TERKINI@PRIHATIN',
+                  //       style: TextStyle(fontSize: 16.0, color: Colors.white),
+                  //     ),
+                  //   ),
+                  // ),
+                  // SizedBox(
+                  //   height: 20,
+                  // ),
                   Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20.0),
@@ -423,7 +525,50 @@ class _HomeScreen2State extends State<HomeScreen2> {
                       ),
                       child: Text(
                         'PELUANG PENDIDIKAN',
-                        style: TextStyle(fontSize: 16.0, color: Colors.white),
+                        style: TextStyle(
+                            fontSize: 16.0,
+                            color: Colors.white,
+                            fontWeight: FontWeight.w600),
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20.0),
+                      gradient: LinearGradient(
+                        colors: <Color>[
+                          Colors.indigo[800],
+                          Color(0XFFe52d27),
+                          // Color(0XFFb31217),
+                        ],
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                      ),
+                    ),
+                    child: TextButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => DonationScreen(),
+                          ),
+                        );
+                      },
+                      style: TextButton.styleFrom(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                        minimumSize: Size(250, 60),
+                      ),
+                      child: Text(
+                        'SUMBANGAN KORPORAT',
+                        style: TextStyle(
+                            fontSize: 16.0,
+                            color: Colors.white,
+                            fontWeight: FontWeight.w600),
                       ),
                     ),
                   ),

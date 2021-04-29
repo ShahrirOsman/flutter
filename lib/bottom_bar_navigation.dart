@@ -20,7 +20,8 @@ class _BottomBarNavigationState extends State<BottomBarNavigation> {
 
   List<Widget> tabPages = [
     HomeScreen2(),
-    TerkiniPrihatinScreen(),
+    RegistrationScreen(),
+    // TerkiniPrihatinScreen(),
     // NewsScreen(),
     // ProfileScreen(),
   ];
@@ -53,15 +54,20 @@ class _BottomBarNavigationState extends State<BottomBarNavigation> {
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.article_outlined,
+              Icons.app_registration,
               size: 30,
             ),
-            label: 'Terkini@PRIHATIN',
+            label: 'Peluang Pendidikan',
             backgroundColor: Color(0XFF1D7BB8),
           ),
         ],
       ),
-      body: PageView(
+      body:
+          //  IndexedStack(
+          //   children: tabPages,
+          //   index: _pageIndex,
+          // ),
+          PageView(
         children: tabPages,
         onPageChanged: onPageChanged,
         controller: _pageController,
@@ -80,5 +86,8 @@ class _BottomBarNavigationState extends State<BottomBarNavigation> {
     // this._pageController.animateToPage(index,
     //     duration: const Duration(milliseconds: 500), curve: Curves.easeInOut);
     _pageController.jumpToPage(index);
+    // setState(() {
+    //   _pageIndex = index;
+    // });
   }
 }

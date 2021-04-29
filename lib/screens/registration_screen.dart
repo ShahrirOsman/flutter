@@ -6,6 +6,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:intl/intl.dart';
+import 'package:yayasan_prihatin/bottom_bar_navigation.dart';
 import 'package:yayasan_prihatin/models/form_details.dart';
 import 'package:yayasan_prihatin/models/postcode.dart';
 import 'package:yayasan_prihatin/models/upload_file.dart';
@@ -107,7 +108,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Pendaftaran',
+          'Peluang Pendidikan',
           style: TextStyle(color: Colors.white),
         ),
       ),
@@ -1138,9 +1139,16 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                                     Map<String, dynamic> res = jsonDecode(msg);
                                     if (res['message'] ==
                                         'Data Inserted Successfully') {
-                                      Navigator.pop(context);
+                                      // Navigator.pop(context);
                                       EasyLoading.showToast(
                                           'Pendaftaran Berjaya');
+                                      Navigator.pushReplacement(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) =>
+                                              BottomBarNavigation(),
+                                        ),
+                                      );
                                     } else {
                                       EasyLoading.showError(
                                           'Pendaftaran Tidak Berjaya, Sila Cuba Lagi');
