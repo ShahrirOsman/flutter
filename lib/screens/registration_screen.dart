@@ -916,13 +916,11 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                       },
                       child: Row(
                         children: <Widget>[
-                          Text(
-                            '$baseName1',
-                            style: TextStyle(fontSize: 15),
-                          ),
-                          Text(
-                            ' *',
-                            style: TextStyle(fontSize: 16, color: Colors.red),
+                          Expanded(
+                            child: Text(
+                              '$baseName1',
+                              style: TextStyle(fontSize: 15),
+                            ),
                           ),
                           Container(
                             padding: EdgeInsets.symmetric(horizontal: 10),
@@ -930,6 +928,10 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                                 baseName1 == 'Muat Naik Salinan Kad Pengenalan'
                                     ? Icon(Icons.drive_folder_upload)
                                     : null,
+                          ),
+                          Text(
+                            ' *',
+                            style: TextStyle(fontSize: 16, color: Colors.red),
                           ),
                         ],
                       ),
@@ -958,20 +960,22 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                       },
                       child: Row(
                         children: <Widget>[
-                          Text(
-                            '$baseName2',
-                            style: TextStyle(fontSize: 15),
-                          ),
-                          Text(
-                            ' *',
-                            style: TextStyle(fontSize: 16, color: Colors.red),
+                          Expanded(
+                            child: Text(
+                              '$baseName2',
+                              style: TextStyle(fontSize: 15),
+                            ),
                           ),
                           Container(
                             padding: EdgeInsets.symmetric(horizontal: 10),
                             child: baseName2 == 'Muat Naik Salinan Sijil SPM'
                                 ? Icon(Icons.drive_folder_upload)
                                 : null,
-                          )
+                          ),
+                          Text(
+                            ' *',
+                            style: TextStyle(fontSize: 16, color: Colors.red),
+                          ),
                         ],
                       ),
                     ),
@@ -999,9 +1003,11 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                       },
                       child: Row(
                         children: <Widget>[
-                          Text(
-                            '$baseName3',
-                            style: TextStyle(fontSize: 15),
+                          Expanded(
+                            child: Text(
+                              '$baseName3',
+                              style: TextStyle(fontSize: 15),
+                            ),
                           ),
                           Container(
                             padding: EdgeInsets.symmetric(horizontal: 10),

@@ -7,6 +7,7 @@ import 'package:yayasan_prihatin/screens/donation_screen.dart';
 import 'package:yayasan_prihatin/screens/elemen_prihatin.dart';
 import 'package:yayasan_prihatin/screens/fungsi.dart';
 import 'package:yayasan_prihatin/screens/home_screen.dart';
+import 'package:yayasan_prihatin/screens/lembaga_penasihat_screen.dart';
 import 'package:yayasan_prihatin/screens/maklumat_korporat.dart';
 import 'package:yayasan_prihatin/screens/mutiara_kata.dart';
 import 'package:yayasan_prihatin/screens/news_screen.dart';
@@ -91,7 +92,7 @@ class AppDrawer extends StatelessWidget {
                 ListTile(
                   leading: SizedBox(),
                   title: Text(
-                    'Mutiara Kata',
+                    'Mutiara Kata Pengerusi',
                     style: TextStyle(
                       color: Colors.indigo[800],
                     ),
@@ -118,6 +119,23 @@ class AppDrawer extends StatelessWidget {
                       context,
                       MaterialPageRoute(
                         builder: (context) => MaklumatKorporat(),
+                      ),
+                    );
+                  },
+                ),
+                ListTile(
+                  leading: SizedBox(),
+                  title: Text(
+                    'Lembaga Penasihat',
+                    style: TextStyle(
+                      color: Colors.indigo[800],
+                    ),
+                  ),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => LembagaPenasihat(),
                       ),
                     );
                   },
